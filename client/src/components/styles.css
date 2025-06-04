@@ -59,6 +59,7 @@
         width: 47.5%;
         background-color: rgb(50, 195, 205);
         margin-top: .8rem;
+        margin-bottom: 32px;
         min-height: 0;
       }
       
@@ -88,6 +89,17 @@
         margin: 15px 40px 10px 40px;
         background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
         transition: 0.2s;
+
+        @media screen and (max-width: 600px) {
+          flex-direction: column;
+        }
+      }
+      
+      .todos_main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 5px;
       }
 
       .todos__single:last-child{
@@ -105,7 +117,6 @@
       
       .todos__single--text {
         flex: 1;
-        padding: 5px;
         border: none;
         font-size: 30px;
       }
@@ -142,4 +153,21 @@
 
       s{
         text-decoration:2.5px  line-through   wavy #32c3cd;
+      }
+
+      .todo__timestamp {
+        font-size: 0.8em;
+        color: #555;
+        margin-top: 5px;
+        width: 100%; /* Ensure it takes full width if needed */
+        text-align: left; /* Align to the left below the todo text */
+      }
+
+      .icons-container { /* Renamed from 'div' to '.icons-container' in SingleItem.tsx for clarity */
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 600px) {
+          margin-top: 12px;
+        }
       }
